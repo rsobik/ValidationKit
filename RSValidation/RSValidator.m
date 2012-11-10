@@ -31,11 +31,6 @@ NSString * const RSValidatorErrorDomain = @"RSValidatorErrorDomain";
     return [[RSPredicateValidator alloc] initWithPredicate:predicate];
 }
 
-+ (id)validatorWithValidators:(NSArray *)validators
-{
-    return [[RSCompoundAndValidator alloc] initWithValidators:validators];
-}
-
 + (id)validatorByNegating:(id<RSValidator>)validator
 {
     return [[RSNotValidator alloc] initWithValidator:validator];
