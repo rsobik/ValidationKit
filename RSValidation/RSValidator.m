@@ -13,6 +13,7 @@
 #import "RSEnumerationValidator.h"
 #import "RSNotValidator.h"
 #import "RSCompoundAndValidator.h"
+#import "RSBlockValidator.h"
 
 NSString * const RSValidatorErrorDomain = @"RSValidatorErrorDomain";
 
@@ -36,6 +37,11 @@ NSString * const RSValidatorErrorDomain = @"RSValidatorErrorDomain";
 + (id)validatorByNegating:(id<RSValidator>)validator
 {
     return [[RSNotValidator alloc] initWithValidator:validator];
+}
+
++ (id)validatorWithBlock:(BOOL (^)(id obj, NSError **error))validationBlock
+{
+    return [[RSBlockValidator alloc] initWithBlock:validationBlock];
 }
 
 + (id)validatorForString

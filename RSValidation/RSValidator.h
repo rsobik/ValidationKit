@@ -25,6 +25,7 @@ typedef enum {
 + (id)validatorForPredicate:(NSPredicate *)predicate;
 + (id)validatorWithValidators:(NSArray *)validators;
 + (id)validatorByNegating:(id<RSValidator>)validator;
++ (id)validatorWithBlock:(BOOL (^)(id obj, NSError **error))validationBlock;
 
 + (id)validatorForString;
 + (id)validatorForNumber;

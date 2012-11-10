@@ -18,6 +18,8 @@
 		7F6A2047164EEA90005E2BEE /* RSCompoundOrValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A2046164EEA90005E2BEE /* RSCompoundOrValidator.m */; };
 		7F6A2049164EEABD005E2BEE /* RSCompoundOrValidatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A2048164EEABD005E2BEE /* RSCompoundOrValidatorTest.m */; };
 		7F6A204B164EEDA2005E2BEE /* RSCompoundAllValidatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A204A164EEDA2005E2BEE /* RSCompoundAllValidatorTest.m */; };
+		7F6A204F164EEF22005E2BEE /* RSBlockValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A204E164EEF22005E2BEE /* RSBlockValidator.m */; };
+		7F6A2051164EEF30005E2BEE /* RSBlockValidatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A2050164EEF30005E2BEE /* RSBlockValidatorTest.m */; };
 		7F9AF88C1642F0E700775708 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9AF88B1642F0E700775708 /* Foundation.framework */; };
 		7F9AF8BB1642F1B800775708 /* RSClassValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AF8BA1642F1B800775708 /* RSClassValidator.m */; };
 		7F9AF8BE1642F1DA00775708 /* RSNilValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AF8BD1642F1DA00775708 /* RSNilValidator.m */; };
@@ -66,6 +68,9 @@
 		7F6A2046164EEA90005E2BEE /* RSCompoundOrValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCompoundOrValidator.m; sourceTree = "<group>"; };
 		7F6A2048164EEABD005E2BEE /* RSCompoundOrValidatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCompoundOrValidatorTest.m; sourceTree = "<group>"; };
 		7F6A204A164EEDA2005E2BEE /* RSCompoundAllValidatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCompoundAllValidatorTest.m; sourceTree = "<group>"; };
+		7F6A204D164EEF22005E2BEE /* RSBlockValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBlockValidator.h; sourceTree = "<group>"; };
+		7F6A204E164EEF22005E2BEE /* RSBlockValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBlockValidator.m; sourceTree = "<group>"; };
+		7F6A2050164EEF30005E2BEE /* RSBlockValidatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBlockValidatorTest.m; sourceTree = "<group>"; };
 		7F9AF8881642F0E700775708 /* libValidationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libValidationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9AF88B1642F0E700775708 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7F9AF88F1642F0E700775708 /* ValidationKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ValidationKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -131,6 +136,7 @@
 				7F9F364716464CAE00FE5725 /* Class Validator */,
 				7FBAE122164652530013CD7F /* Nil Validator */,
 				7FBAE125164653390013CD7F /* Predicate Validator */,
+				7F6A204C164EEF08005E2BEE /* Block Validator */,
 			);
 			name = "Basic Validators";
 			sourceTree = "<group>";
@@ -164,6 +170,16 @@
 				7F6A2048164EEABD005E2BEE /* RSCompoundOrValidatorTest.m */,
 			);
 			name = "Compund Or Validator";
+			sourceTree = "<group>";
+		};
+		7F6A204C164EEF08005E2BEE /* Block Validator */ = {
+			isa = PBXGroup;
+			children = (
+				7F6A204D164EEF22005E2BEE /* RSBlockValidator.h */,
+				7F6A204E164EEF22005E2BEE /* RSBlockValidator.m */,
+				7F6A2050164EEF30005E2BEE /* RSBlockValidatorTest.m */,
+			);
+			name = "Block Validator";
 			sourceTree = "<group>";
 		};
 		7F9AF87D1642F0E700775708 = {
@@ -402,6 +418,7 @@
 				7F2846EB1642F7EF007AB643 /* RSPredicateValidator.m in Sources */,
 				7F2846F31642F9F9007AB643 /* RSValidator.m in Sources */,
 				7F6A2047164EEA90005E2BEE /* RSCompoundOrValidator.m in Sources */,
+				7F6A204F164EEF22005E2BEE /* RSBlockValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +434,7 @@
 				7F6A2042164EE869005E2BEE /* RSNotValidatorTest.m in Sources */,
 				7F6A2049164EEABD005E2BEE /* RSCompoundOrValidatorTest.m in Sources */,
 				7F6A204B164EEDA2005E2BEE /* RSCompoundAllValidatorTest.m in Sources */,
+				7F6A2051164EEF30005E2BEE /* RSBlockValidatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
