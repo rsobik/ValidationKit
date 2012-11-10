@@ -6,7 +6,6 @@
 //  Copyright (c) 2012 Raphael Sobik. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "RSValidator.h"
 
 @interface RSClassValidator : RSValidator
