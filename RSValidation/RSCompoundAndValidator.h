@@ -1,5 +1,5 @@
 //
-//  RSCompoundValidator.h
+//  RSCompoundAndValidator.h
 //  RSValidation
 //
 //  Created by Raphael Sobik on 01.11.12.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RSValidator.h"
 
-@interface RSCompoundValidator : NSObject <RSValidator>
+@interface RSCompoundAndValidator : NSObject <RSValidator>
 
 - (id)initWithValidators:(NSArray *)validators;
 

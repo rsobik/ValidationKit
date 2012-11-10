@@ -1,20 +1,20 @@
 //
-//  RSCompoundValidator.m
-//  RSValidation
+//  RSCompoundOrValidator.m
+//  ValidationKit
 //
-//  Created by Raphael Sobik on 01.11.12.
+//  Created by Raphael Sobik on 10.11.12.
 //  Copyright (c) 2012 Raphael Sobik. All rights reserved.
 //
 
-#import "RSCompoundValidator.h"
+#import "RSCompoundOrValidator.h"
 
-@interface RSCompoundValidator ()
+@interface RSCompoundOrValidator ()
 
 @property (nonatomic, copy) NSArray *validators;
 
 @end
 
-@implementation RSCompoundValidator
+@implementation RSCompoundOrValidator
 
 - (id)initWithValidators:(NSArray *)validators
 {
@@ -29,13 +29,14 @@
 - (BOOL)validateObject:(id)object error:(NSError *__autoreleasing *)error
 {
     for (id<RSValidator> validator in self.validators) {
-        BOOL valid = [validator validateObject:object error:error];
-        if (!valid) {
-            return NO;
+        if ([validator validateObject:object error:error]) {
+            return YES;
+        } else {
+            break;
         }
     }
 
-    return YES;
+    return NO;
 }
 
 @end

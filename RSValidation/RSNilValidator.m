@@ -18,7 +18,7 @@
         *error = [NSError errorWithDomain:RSValidatorErrorDomain code:RSValidatorErrorCodeInvalid userInfo:nil];
     }
 
-    return object == nil;
+    return isNil;
 }
 
 @end

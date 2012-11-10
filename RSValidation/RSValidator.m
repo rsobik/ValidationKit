@@ -12,7 +12,7 @@
 #import "RSPredicateValidator.h"
 #import "RSEnumerationValidator.h"
 #import "RSNotValidator.h"
-#import "RSCompoundValidator.h"
+#import "RSCompoundAndValidator.h"
 
 NSString * const RSValidatorErrorDomain = @"RSValidatorErrorDomain";
 
@@ -30,7 +30,7 @@ NSString * const RSValidatorErrorDomain = @"RSValidatorErrorDomain";
 
 + (id)validatorWithValidators:(NSArray *)validators
 {
-    return [[RSCompoundValidator alloc] initWithValidators:validators];
+    return [[RSCompoundAndValidator alloc] initWithValidators:validators];
 }
 
 + (id)validatorByNegating:(id<RSValidator>)validator
