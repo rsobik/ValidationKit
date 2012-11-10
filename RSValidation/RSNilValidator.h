@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "RSValidator.h"
 
-@interface RSNilValidator : NSObject <RSValidator>
+@interface RSNilValidator : RSValidator
 
 @end

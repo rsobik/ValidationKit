@@ -10,13 +10,13 @@
 
 @interface RSEnumerationValidator ()
 
-@property (nonatomic, strong) id<RSValidator> validator;
+@property (nonatomic, strong) RSValidator *validator;
 
 @end
 
 @implementation RSEnumerationValidator
 
-- (id)initWithValidator:(id<RSValidator>)validator
+- (id)initWithValidator:(RSValidator *)validator
 {
     self = [super init];
     if (self) {

@@ -11,7 +11,7 @@
 
 typedef BOOL(^RSValidatorBlock)(id object, NSError **error);
 
-@interface RSBlockValidator : NSObject <RSValidator>
+@interface RSBlockValidator : RSValidator
 
 - (id)initWithBlock:(RSValidatorBlock)validationBlock;
 

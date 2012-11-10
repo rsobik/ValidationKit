@@ -21,6 +21,11 @@ NSString * const RSValidatorErrorDomain = @"RSValidatorErrorDomain";
 
 @implementation RSValidator
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
+
 + (id)validatorForClass:(Class)klass
 {
     return [[RSClassValidator alloc] initWithClass:klass];
@@ -31,7 +36,7 @@ NSString * const RSValidatorErrorDomain = @"RSValidatorErrorDomain";
     return [[RSPredicateValidator alloc] initWithPredicate:predicate];
 }
 
-+ (id)validatorByNegating:(id<RSValidator>)validator
++ (id)validatorByNegating:(RSValidator *)validator
 {
     return [[RSNotValidator alloc] initWithValidator:validator];
 }

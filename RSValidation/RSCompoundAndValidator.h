@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RSValidator.h"
 
-@interface RSCompoundAndValidator : NSObject <RSValidator>
+@interface RSCompoundAndValidator : RSValidator
 
 - (id)initWithValidators:(NSArray *)validators;
 

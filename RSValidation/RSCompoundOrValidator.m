@@ -28,7 +28,7 @@
 
 - (BOOL)validateObject:(id)object error:(NSError *__autoreleasing *)error
 {
-    for (id<RSValidator> validator in self.validators) {
+    for (RSValidator *validator in self.validators) {
         if ([validator validateObject:object error:error]) {
             return YES;
         } else {

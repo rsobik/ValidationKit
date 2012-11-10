@@ -13,17 +13,13 @@ typedef enum {
     RSValidatorErrorCodeInvalid
 } RSValidatorErrorCode;
 
-@protocol RSValidator <NSObject>
+@interface RSValidator : NSObject <NSCopying>
 
-- (BOOL)validateObject:(id)object error:(NSError **)error;
-
-@end
-
-@interface RSValidator : NSObject <RSValidator>
+- (BOOL)validateObject:(id)object error:(NSError *__autoreleasing *)error;
 
 + (id)validatorForClass:(Class)klass;
 + (id)validatorForPredicate:(NSPredicate *)predicate;
-+ (id)validatorByNegating:(id<RSValidator>)validator;
++ (id)validatorByNegating:(RSValidator *)validator;
 + (id)validatorWithBlock:(BOOL (^)(id obj, NSError **error))validationBlock;
 
 + (id)andValidatorForValidators:(NSArray *)validators;

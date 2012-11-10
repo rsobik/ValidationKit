@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RSValidator.h"
 
-@interface RSPredicateValidator : NSObject <RSValidator>
+@interface RSPredicateValidator : RSValidator
 
 - (id)initWithPredicate:(NSPredicate *)predicate;
 

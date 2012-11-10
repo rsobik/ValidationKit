@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RSValidator.h"
 
-@interface RSNotValidator : NSObject <RSValidator>
+@interface RSNotValidator : RSValidator
 
-- (id)initWithValidator:(id<RSValidator>)validator;
+- (id)initWithValidator:(RSValidator *)validator;
 
 @end
