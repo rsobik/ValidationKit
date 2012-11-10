@@ -1,5 +1,5 @@
 //
-//  RSValidation.h
+//  RSPredicateEvaluator.h
 //  RSValidation
 //
 //  Created by Raphael Sobik on 01.11.12.
@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RSValidator.h"
 
-@interface RSValidation : NSObject
+@interface RSPredicateValidator : NSObject <RSValidator>
+
+- (id)initWithPredicate:(NSPredicate *)predicate;
 
 @end
